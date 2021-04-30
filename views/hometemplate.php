@@ -313,7 +313,7 @@
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="footer-top-box">
 							<h3>Newsletter</h3>
-							<form class="newsletter-box" method="post" action="newsletter">
+							<form class="newsletter-box" method="post" action="index.php?action=newsletterAction">
 								<div class="form-group">
                                     <input type="hidden" name="urlOfPage" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
 									<input class="" type="email" name="email" placeholder="Email Address*" />
