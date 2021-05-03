@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\Controller;
 use App\Controllers\UsersController;
+use App\Models\UsersManagement;
 
 class AccountController extends Controller {
 
@@ -12,6 +13,10 @@ class AccountController extends Controller {
     }
 
     public function loginsecurity(){
+        $user = new UsersManagement;
+        $user->getUsers($_SESSION['pseudo']);
+
+
         $this->render('account/loginsecurityView');
     }
 

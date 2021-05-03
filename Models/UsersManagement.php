@@ -24,7 +24,6 @@ class UsersManagement extends DbConnection {
             'pseudo'=>$pseudo
         ));
         return $req;
-        /* return $req; */
     }
 
 }

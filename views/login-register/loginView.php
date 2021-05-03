@@ -13,5 +13,5 @@
         </div>
         <input class="ml-auto btn hvr-hover" type="submit" name="login" value="Login">
     </form>
-    <p><a href="index.php?action=register">I don't have an account. Register here.</p>
+    <p><a href="register">I don't have an account. Register here.</p>
 </div>

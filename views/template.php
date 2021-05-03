@@ -3,6 +3,7 @@
 <!-- Basic -->
 
 <head>
+    <base href="http://localhost:8888/webShop/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -16,17 +17,17 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="http://localhost:8888/webShop/public/images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="http://localhost:8888/webShop/public/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="public/images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://localhost:8888/webShop/public/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css" type="text/css">
     <!-- Site CSS -->
-    <link rel="stylesheet" href="http://localhost:8888/webShop/public/css/style.css" type="text/css">
+    <link rel="stylesheet" href="public/css/style.css" type="text/css">
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="http://localhost:8888/webShop/public/css/responsive.css" type="text/css">
+    <link rel="stylesheet" href="public/css/responsive.css" type="text/css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="http://localhost:8888/webShop/public/css/custom.css" type="text/css">
+    <link rel="stylesheet" href="public/css/custom.css" type="text/css">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -53,7 +54,7 @@
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li><a href="index.php?action=account"><i class="fa fa-user s_color"></i>
+                            <li><a href="account"><i class="fa fa-user s_color"></i>
                             <?php if (isset($_SESSION['pseudo'])) {
                                 echo $_SESSION['pseudo'];
                             } else {
@@ -62,15 +63,15 @@
                             ?>
                             </a></li>
                             <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
-                            <li><a href="index.php?action=contact"><i class="fas fa-headset"></i> Contact Us</a></li>
+                            <li><a href="contact"><i class="fas fa-headset"></i> Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="login-box">
 						<select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-							<option><a href="index.php?action=register">Register Here</a></option>
-							<option><a href="index.php?action=login">Sign In</a></option>
+							<option><a href="register">Register Here</a></option>
+							<option><a href="login">Sign In</a></option>
 						</select>
 					</div>
                     <div class="text-slid-box">
@@ -119,28 +120,28 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="index.php"><img src="http://localhost:8888/webShop/public/images/logo.png" class="logo" alt=""></a>
+                    <a class="navbar-brand" href="/webShop"><img src="public/images/logo.png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.php?action=about">About Us</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="/webShop">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about">About Us</a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
 								<li><a href="shop/sidebarshop">Sidebar Shop</a></li>
-								<li><a href="index.php?action=shopdetail">Shop Detail</a></li>
-                                <li><a href="index.php?action=cart">Cart</a></li>
-                                <li><a href="index.php?action=checkout">Checkout</a></li>
-                                <li><a href="index.php?action=account">My Account</a></li>
-                                <li><a href="index.php?action=wishlist">Wishlist</a></li>
+								<li><a href="shop/shopdetail">Shop Detail</a></li>
+                                <li><a href="shop/cart">Cart</a></li>
+                                <li><a href="shop/checkout">Checkout</a></li>
+                                <li><a href="account">My Account</a></li>
+                                <li><a href="shop/wishlist">Wishlist</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="index.php?action=gallery">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.php?action=contact">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact">Contact Us</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -150,7 +151,7 @@
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu">
-							<a href="index.php?action=cart">
+							<a href="shop/cart">
 								<i class="fa fa-shopping-bag"></i>
 								<span class="badge">3</span>
 								<p>My Cart</p>
@@ -166,17 +167,17 @@
                 <li class="cart-box">
                     <ul class="cart-list">
                         <li>
-                            <a href="#" class="photo"><img src="http://localhost:8888/webShop/public/images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
+                            <a href="#" class="photo"><img src="public/images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Delica omtantur </a></h6>
                             <p>1x - <span class="price">$80.00</span></p>
                         </li>
                         <li>
-                            <a href="#" class="photo"><img src="http://localhost:8888/webShop/public/images//img-pro-02.jpg" class="cart-thumb" alt="" /></a>
+                            <a href="#" class="photo"><img src="public/images//img-pro-02.jpg" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Omnes ocurreret</a></h6>
                             <p>1x - <span class="price">$60.00</span></p>
                         </li>
                         <li>
-                            <a href="#" class="photo"><img src="http://localhost:8888/webShop/public/images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
+                            <a href="#" class="photo"><img src="public/images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Agam facilisis</a></h6>
                             <p>1x - <span class="price">$40.00</span></p>
                         </li>
@@ -214,7 +215,7 @@
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="http://localhost:8888/webShop/public/images/instagram-img-01.jpg" alt="" />
+                    <img src="public/images/instagram-img-01.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -222,7 +223,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="http://localhost:8888/webShop/public/images/instagram-img-02.jpg" alt="" />
+                    <img src="public/images/instagram-img-02.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -230,7 +231,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="http://localhost:8888/webShop/public/images/instagram-img-03.jpg" alt="" />
+                    <img src="public/images/instagram-img-03.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -238,7 +239,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="http://localhost:8888/webShop/public/images/instagram-img-04.jpg" alt="" />
+                    <img src="public/images/instagram-img-04.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -246,7 +247,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="http://localhost:8888/webShop/public/images/instagram-img-05.jpg" alt="" />
+                    <img src="public/images/instagram-img-05.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -254,7 +255,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="http://localhost:8888/webShop/public/images/instagram-img-06.jpg" alt="" />
+                    <img src="public/images/instagram-img-06.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -262,7 +263,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="http://localhost:8888/webShop/public/images/instagram-img-07.jpg" alt="" />
+                    <img src="public/images/instagram-img-07.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -270,7 +271,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="http://localhost:8888/webShop/public/images/instagram-img-08.jpg" alt="" />
+                    <img src="public/images/instagram-img-08.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -278,7 +279,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="http://localhost:8888/webShop/public/images/instagram-img-09.jpg" alt="" />
+                    <img src="public/images/instagram-img-09.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -286,7 +287,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="http://localhost:8888/webShop/public/images/instagram-img-05.jpg" alt="" />
+                    <img src="public/images/instagram-img-05.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -352,7 +353,7 @@
                         <div class="footer-link">
                             <h4>Information</h4>
                             <ul>
-                                <li><a href="index.php?action=about">About Us</a></li>
+                                <li><a href="about">About Us</a></li>
                                 <li><a href="#">Customer Service</a></li>
                                 <li><a href="#">Our Sitemap</a></li>
                                 <li><a href="#">Terms &amp; Conditions</a></li>
@@ -393,21 +394,21 @@
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
-    <script src="http://localhost:8888/webShop/public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/popper.min.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="public/js/popper.min.js" type="text/javascript"></script>
+    <script src="public/js/bootstrap.min.js" type="text/javascript"></script>
     <!-- ALL PLUGINS -->
-    <script src="http://localhost:8888/webShop/public/js/jquery.superslides.min.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/bootstrap-select.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/inewsticker.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/bootsnav.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/images-loded.min.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/isotope.min.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/baguetteBox.min.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/form-validator.min.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/contact-form-script.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/webShop/public/js/custom.js" type="text/javascript"></script>
+    <script src="public/js/jquery.superslides.min.js" type="text/javascript"></script>
+    <script src="public/js/bootstrap-select.js" type="text/javascript"></script>
+    <script src="public/js/inewsticker.js" type="text/javascript"></script>
+    <script src="public/js/bootsnav.js" type="text/javascript"></script>
+    <script src="public/js/images-loded.min.js" type="text/javascript"></script>
+    <script src="public/js/isotope.min.js" type="text/javascript"></script>
+    <script src="public/js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="public/js/baguetteBox.min.js" type="text/javascript"></script>
+    <script src="public/js/form-validator.min.js" type="text/javascript"></script>
+    <script src="public/js/contact-form-script.js" type="text/javascript"></script>
+    <script src="public/js/custom.js" type="text/javascript"></script>
 </body>
 
 </html>

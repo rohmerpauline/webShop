@@ -7,7 +7,7 @@
                 <div class="col-lg-12">
                     <h2>My Account</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php?action=shop">Shop</a></li>
+                        <li class="breadcrumb-item"><a href="shop/sidebarshop">Shop</a></li>
                         <li class="breadcrumb-item active">My Account</li>
                     </ul>
                 </div>
@@ -38,7 +38,7 @@
                         <div class="account-box">
                             <div class="service-box">
                                 <div class="service-icon">
-                                    <a href="index.php?action=loginsecurity"><i class="fa fa-lock"></i> </a>
+                                    <a href="account/loginsecurity"><i class="fa fa-lock"></i> </a>
                                 </div>
                                 <div class="service-desc">
                                     <h4>Login &amp; security</h4>

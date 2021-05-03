@@ -3,6 +3,7 @@
 <div class="contact-box-main text-center">
     <h1 class="mb-3">Log In & Security</h1>
     <p>
+    <?php echo $username; ?>
         Username : <?php echo $_SESSION['pseudo']; ?>
         <form method="">
         <span>

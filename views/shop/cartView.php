@@ -7,7 +7,7 @@
                 <div class="col-lg-12">
                     <h2>Cart</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php?action=shop">Shop</a></li>
+                        <li class="breadcrumb-item"><a href="shop/sidebarshop">Shop</a></li>
                         <li class="breadcrumb-item active">Cart</li>
                     </ul>
                 </div>
@@ -163,7 +163,7 @@
                         </div>
                         <hr> </div>
                 </div>
-                <div class="col-12 d-flex shopping-box"><a href="index.php?action=checkout" class="ml-auto btn hvr-hover">Checkout</a> </div>
+                <div class="col-12 d-flex shopping-box"><a href="shop/checkout" class="ml-auto btn hvr-hover">Checkout</a> </div>
             </div>
 
         </div>
